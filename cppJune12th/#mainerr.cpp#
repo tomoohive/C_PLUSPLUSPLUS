@@ -1,0 +1,25 @@
+#include "Circle.h"
+
+int main(){
+  int p[2],r;
+  bool judgement;
+  Circle bool_circ;
+  for(int i=0; i<10; i++){
+    Circle *circ = new Circle(i+10, 2*i+10, 15*(i+1));
+    circ->getPosition(p);
+    r = circ->getRadius();
+    printf("Position = %d, %d, Radius = %d\n", p[0],p[1],r);
+    circ->draw();
+    judgement =circ->checkOverlap(dynamic_cast<Circle>(circ));
+  }
+  for(int i=0; i<10; i++){
+    boo = new Circle(i+10, 2*i+10, 15*(i+1));
+    circ->getPosition(p);
+    r = circ->getRadius();
+    printf("Position = %d, %d, Radius = %d\n", p[0],p[1],r);
+    circ->draw();
+    judgement =circ->checkOverlap(dynamic_cast<Circle>(circ));
+  }
+
+  return (1);
+}

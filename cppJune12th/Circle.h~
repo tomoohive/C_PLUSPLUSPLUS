@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+class Circle{
+ public:
+  int x,y; //Central Coordinates
+  int rad; //Radius
+
+  Circle() {x=y=0; rad=10;} //Constructor
+  Circle(int cx, int cy, int r) {x=cx; y=cy; rad=r;}  //Different type
+  ~Circle () {} //Extinct
+
+  //Member Function
+  void draw () {printf ("位置(%d,%d)に半径%dの円を描画\n",x,y,rad);} //Draw Function
+};
