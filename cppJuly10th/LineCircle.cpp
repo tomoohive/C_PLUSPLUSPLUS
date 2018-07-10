@@ -1,7 +1,7 @@
 #include "LineCircle.h"
 
 LineCircle::LineCircle() : ColorCircle(){
-	width = 0;
+	width = 1;
 }
 
 LineCircle::LineCircle(int cx, int cy, int r, std::string c, int w) : ColorCircle(cx, cy, r, c){

@@ -9,7 +9,7 @@ protected:
 
 public:
 	LineCircle();
-	LineCircle(int cx, int cy, int r, std::string c, int width);
+	LineCircle(int cx, int cy, int r, std::string c="black", int width=1);
 
 	//void draw(svg* svgObj);
 	virtual void draw (svg*);

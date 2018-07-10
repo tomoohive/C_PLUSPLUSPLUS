@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<stdio.h>
+#include "CircleException.h"
 #include "svg.h"
 
 class Circle{
@@ -14,8 +15,9 @@ class Circle{
 
   //Member Function
   void draw ();
-  void setPosition(int x, int y);
-  void setRadius(int rad);
+  ~Circle() {}
+  void setPosition(int x, int y) throw(CircleException);
+  void setRadius(int rad) throw(CircleException);
   int getRadius();
   void getPosition(int xy[]);
   //bool checkOverlap(Circle circ);

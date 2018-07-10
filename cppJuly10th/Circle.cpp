@@ -8,12 +8,18 @@ Circle::Circle(int cx, int cy, int r){
   x = cx; y = cy; rad = r;
 }
 
-void Circle::setPosition(int x, int y){
-  this->x = x; this->y = y;
+void Circle::setPosition(int x, int y) throw(CircleException){
+  if(x < 0 || y < 0)
+    throw CircleException("Corrdinate of position is out of range!");
+  else
+    this->x = x; this->y = y;
 }
 
-void Circle::setRadius(int rad){
-  this->rad = rad;
+void Circle::setRadius(int rad) throw(CircleException){
+  if(rad <= 0)
+    throw CircleException("Radius is less than zero!");
+  else
+    this->rad = rad;
 }
 
 int Circle::getRadius(){

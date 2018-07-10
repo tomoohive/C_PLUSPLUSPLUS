@@ -1,11 +1,11 @@
 #include "DoubleCircle.h"
 
 DoubleCircle::DoubleCircle() : ColorCircle(){
-	color2 = "black";
-	rad2 = 0;
+	color2 = "yellow";
+	rad2 = rad;
 }
 
-DoubleCircle::DoubleCircle(int cx, int cy, int r, std::string c, std::string c2, int r2) : ColorCircle(cx, cy, r, c){
+DoubleCircle::DoubleCircle(int cx, int cy, int r, std::string c="black", std::string c2="yellow", int r2=0) : ColorCircle(cx, cy, r, c){
 	color2 = c2;
 	rad2 = r2;
 }

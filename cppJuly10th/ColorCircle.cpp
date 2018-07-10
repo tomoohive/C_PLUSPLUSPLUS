@@ -4,7 +4,7 @@ ColorCircle::ColorCircle() : Circle(){
 	color = "black";
 }
 
-ColorCircle::ColorCircle(int cx, int cy, int r, std::string c) : Circle(cx, cy, r){
+ColorCircle::ColorCircle(int cx, int cy, int r, std::string c="black") : Circle(cx, cy, r){
 	color = c;
 }
 
