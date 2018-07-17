@@ -10,4 +10,6 @@ class svg{
   static void open (std::string filename, int width, int height);
   static void close(); //close SVG FILE
   static void drawCircle(int x, int y, int rad, std::string color = "black", int width=0); //Draw circle
+  static void drawRect(int x, int y, int width, int height);
+  static void drawText(int x, int y, string label);
 };

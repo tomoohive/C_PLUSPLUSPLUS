@@ -19,3 +19,14 @@ void svg::drawCircle(int x, int y, int rad, std::string color,int width){
   		ofs << "<circle cx='"<<x<<"'cy='"<<y<<"'r='"<<rad<<"'fill='"<<color<<"'/>";
   	ofs << std::endl;
 }
+
+void svg::drawRect(int x, int y, int width, int height){
+  ofs << "<rect x='" << x << "'y='" << y << "'width='" << width << "'height='" << height
+  << "' fill='black' />" << std::endl;
+}
+
+void svg::drawText(int x, int y, string label){
+  ofs << "<text x='" << x << "'y='" << y << "'>" << std::endl; //開始タグ
+  ofs << label; //描画テキスト
+  ofs << "</text>"; //終了タグ
+}
