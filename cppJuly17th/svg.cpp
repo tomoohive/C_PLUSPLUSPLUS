@@ -25,7 +25,7 @@ void svg::drawRect(int x, int y, int width, int height){
   << "' fill='black' />" << std::endl;
 }
 
-void svg::drawText(int x, int y, string label){
+void svg::drawText(int x, int y, std::string label){
   ofs << "<text x='" << x << "'y='" << y << "'>" << std::endl; //開始タグ
   ofs << label; //描画テキスト
   ofs << "</text>"; //終了タグ

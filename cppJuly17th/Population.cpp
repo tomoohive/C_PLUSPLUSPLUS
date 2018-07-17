@@ -4,14 +4,14 @@
 
 void Population::read(const char *fileName){
 	ifstream ifs(fileName);
-	if(ifs.fail){
+	if(ifs.fail()){
 		cerr << "File do not exist.";
 		exit(0);
 	}
 	string str;
 	getline(ifs, str, '\r');
-	vector<string> labelStrs = split(str, '.');
-	for(int i=0; i < labelStrs.at(i)){
+	vector<string> labelStrs = split(str, ',');
+	for(int i=0; i < labelStrs.size(); i++){
 		labels.push_back(labelStrs.at(i));
 	}
 	getline(ifs, str, '\r');
@@ -21,7 +21,15 @@ void Population::read(const char *fileName){
 	}
 }
 
-vector<string> Population:split(string& str, char delim){
+vector<string> Population::get_labels(){
+	return labels;
+}
+
+vector<int> Population::get_values(){
+	return values;
+}
+
+vector<string> Population::split(string& str, char delim){
 	vector<string> res;
 	size_t current = 0, found;
 	while((found = str.find_first_of(delim, current)) != string::npos){

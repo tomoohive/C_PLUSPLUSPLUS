@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class PopulationP{
+class Population{
 private:
 	vector<string> labels;
 	vector<int> values;
@@ -11,4 +11,6 @@ private:
 
 public:
 	void read(const char *fileName);
-}
+	vector<string> get_labels();
+	vector<int> get_values();
+};
